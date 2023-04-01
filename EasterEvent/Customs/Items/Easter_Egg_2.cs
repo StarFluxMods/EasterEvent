@@ -7,10 +7,10 @@ using UnityEngine;
 
 namespace EasterEvent.Customs
 {
-	public class Easter_Egg : CustomItemGroup
+	public class Easter_Egg_2 : CustomItemGroup
 	{
-		public override string UniqueNameID => "Easter_Egg";
-		public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("Easter_Egg");
+		public override string UniqueNameID => "Easter_Egg_2";
+		public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("Easter_Egg_2");
 
 		public override List<ItemGroup.ItemSet> Sets => new List<ItemGroup.ItemSet>
 		{
@@ -19,19 +19,18 @@ namespace EasterEvent.Customs
 				IsMandatory = true,
 				Items = new List<Item>
 				{
-					(Item)GDOUtils.GetCustomGameDataObject<Chocolate_Egg_Half>().GameDataObject,
-					(Item)GDOUtils.GetCustomGameDataObject<Chocolate_Egg_Half>().GameDataObject
+					(Item)GDOUtils.GetCustomGameDataObject<Chocolate_Egg>().GameDataObject
 				},
-				Max = 2,
-				Min = 2
+				Max = 1,
+				Min = 1
 			},
 			new ItemGroup.ItemSet
 			{
 				IsMandatory = false,
 				Items = new List<Item>
 				{
-					(Item)GDOUtils.GetCustomGameDataObject<Red_Dye>().GameDataObject,
-					(Item)GDOUtils.GetCustomGameDataObject<Blue_Dye>().GameDataObject
+					(Item)GDOUtils.GetCustomGameDataObject<White_Dye>().GameDataObject,
+					(Item)GDOUtils.GetCustomGameDataObject<Green_Dye>().GameDataObject
 				},
 				Max = 2,
 				Min = 2
@@ -47,14 +46,14 @@ namespace EasterEvent.Customs
 			{
 				new ItemGroupView.ComponentGroup
 				{
-					Item = (Item)GDOUtils.GetCustomGameDataObject<Blue_Dye>().GameDataObject,
-					GameObject = GameObjectUtils.GetChildObject(item.Prefab, "Pattern_3/Easter_Egg_3"),
+					Item = (Item)GDOUtils.GetCustomGameDataObject<Green_Dye>().GameDataObject,
+					GameObject = GameObjectUtils.GetChildObject(item.Prefab, "Pattern_2/Green"),
 					DrawAll = true
 				},
 				new ItemGroupView.ComponentGroup
 				{
-					Item = (Item)GDOUtils.GetCustomGameDataObject<Red_Dye>().GameDataObject,
-					GameObject = GameObjectUtils.GetChildObject(item.Prefab, "Pattern_3/Easter_Egg_3_Overlay"),
+					Item = (Item)GDOUtils.GetCustomGameDataObject<White_Dye>().GameDataObject,
+					GameObject = GameObjectUtils.GetChildObject(item.Prefab, "Pattern_2/White"),
 					DrawAll = true
 				}
 			};

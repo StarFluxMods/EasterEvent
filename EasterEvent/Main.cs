@@ -23,12 +23,29 @@ namespace EasterEvent
 		public override void OnPostActivate(Mod mod)
 		{
 			bundle = mod.GetPacks<AssetBundleModPack>().SelectMany(e => e.AssetBundles).ToList()[0];
-			AddGameDataObject<Red_Dye_Provider>();
-			AddGameDataObject<Red_Dye>();
+			AddGameDataObject<Chocolate_Egg_Half>();
+			AddGameDataObject<Chocolate_Egg>();
+
 			AddGameDataObject<Blue_Dye_Provider>();
 			AddGameDataObject<Blue_Dye>();
-			AddGameDataObject<Chocolate_Egg_Half>();
-			AddGameDataObject<Easter_Egg>();
+			AddGameDataObject<Green_Dye_Provider>();
+			AddGameDataObject<Green_Dye>();
+			AddGameDataObject<Purple_Dye_Provider>();
+			AddGameDataObject<Purple_Dye>();
+			AddGameDataObject<Red_Dye_Provider>();
+			AddGameDataObject<Red_Dye>();
+			AddGameDataObject<White_Dye_Provider>();
+			AddGameDataObject<White_Dye>();
+			AddGameDataObject<Yellow_Dye_Provider>();
+			AddGameDataObject<Yellow_Dye>();
+
+			AddGameDataObject<Easter_Egg_1>();
+			AddGameDataObject<Easter_Egg_2>();
+			AddGameDataObject<Easter_Egg_3>();
+
+			AddGameDataObject<Jumbo_Easter_Egg_1>();
+			AddGameDataObject<Jumbo_Easter_Egg_2>();
+			AddGameDataObject<Jumbo_Easter_Egg_3>();
 		}
 	}
 }
