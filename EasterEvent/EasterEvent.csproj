@@ -3,6 +3,7 @@
   <PropertyGroup>
 	  <TargetFramework>net472</TargetFramework>
 	  <LangVersion>latest</LangVersion>
+	  <AssetBundlePath>C:\Users\Pilch\OneDrive\Desktop\PlateUp! Workspace\PlateUp! Asset Creation Zone\Assets\StreamingAssets\easterevent.assets</AssetBundlePath>
   </PropertyGroup>
 
 	<ItemGroup>
@@ -11,6 +12,19 @@
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
 		<PackageReference Include="Yariazen.PlateUp.ModBuildUtilities" Version="1.6.16" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="MessagePack">
+	    <HintPath>H:\SteamLibrary\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\MessagePack.dll</HintPath>
+	  </Reference>
+	  <Reference Include="MessagePack.Annotations">
+	    <HintPath>H:\SteamLibrary\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\MessagePack.Annotations.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Customs\Dishes\" />
 	</ItemGroup>
 	<PropertyGroup>
 		<PublicizeAll>true</PublicizeAll>

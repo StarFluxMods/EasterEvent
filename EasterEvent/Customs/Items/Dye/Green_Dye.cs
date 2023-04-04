@@ -9,6 +9,6 @@ namespace EasterEvent.Customs
 	{
 		public override string UniqueNameID => "Green_Dye";
 		public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("Green");
-		public override Appliance DedicatedProvider => (Appliance)GDOUtils.GetCustomGameDataObject<Green_Dye_Provider>().GameDataObject;
+		public override Appliance DedicatedProvider => RefVars.Green_Dye_Provider;
 	}
 }

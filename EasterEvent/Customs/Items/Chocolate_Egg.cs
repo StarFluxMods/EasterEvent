@@ -1,7 +1,5 @@
-﻿using Kitchen;
-using KitchenData;
+﻿using KitchenData;
 using KitchenLib.Customs;
-using KitchenLib.Utils;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,16 +18,12 @@ namespace EasterEvent.Customs
 				IsMandatory = true,
 				Items = new List<Item>
 				{
-					(Item)GDOUtils.GetCustomGameDataObject<Chocolate_Egg_Half>().GameDataObject,
-					(Item)GDOUtils.GetCustomGameDataObject<Chocolate_Egg_Half>().GameDataObject
+					RefVars.Chocolate_Egg_Half,
+					RefVars.Chocolate_Egg_Half,
 				},
 				Max = 2,
 				Min = 2
 			}
 		};
-
-		public override void OnRegister(GameDataObject gameDataObject)
-		{
-		}
 	}
 }

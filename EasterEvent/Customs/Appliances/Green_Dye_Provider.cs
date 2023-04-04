@@ -7,26 +7,10 @@ using UnityEngine;
 
 namespace EasterEvent.Customs
 {
-	public class Green_Dye_Provider : CustomAppliance
+	public class Green_Dye_Provider : Base_Dye_Provider
 	{
-		public override string UniqueNameID => "Green_Dye_Provider";
-		public override int BaseGameDataObjectID => ApplianceReferences.SourceApple;
-		public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("Green");
+		public override Item Dye => RefVars.Green_Dye;
 
-		public override List<(Locale, ApplianceInfo)> InfoList => new List<(Locale, ApplianceInfo)>
-		{
-			(
-				Locale.English,
-				new ApplianceInfo
-				{
-					Name = "Green Dye",
-					Description = "Provides Green Dye"
-				}
-			)
-		};
-		public override List<IApplianceProperty> Properties => new List<IApplianceProperty>
-		{
-			KitchenPropertiesUtils.GetUnlimitedCItemProvider(GDOUtils.GetCustomGameDataObject<Green_Dye>().GameDataObject.ID)
-		};
+		public override string DyeName => "Green";
 	}
 }

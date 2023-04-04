@@ -1,5 +1,9 @@
 ﻿using EasterEvent.Customs;
+using EasterEvent.Customs.Appliances;
+using EasterEvent.Customs.Processes;
+using KitchenData;
 using KitchenLib;
+using KitchenLib.References;
 using KitchenMods;
 using System.Linq;
 using System.Reflection;
@@ -38,14 +42,40 @@ namespace EasterEvent
 			AddGameDataObject<White_Dye>();
 			AddGameDataObject<Yellow_Dye_Provider>();
 			AddGameDataObject<Yellow_Dye>();
+			
+			AddGameDataObject<Egg_Chonkifier>();
+			
+			AddGameDataObject<Chonkify>();
+			AddGameDataObject<Freeze>();
+			
+			AddGameDataObject<Egg_Basket>();
+			AddGameDataObject<Basket_Stack>();
+			
+			AddGameDataObject<Chocolate_Mold_Empty>();
+			AddGameDataObject<Chocolate_Mold_Raw>();
+			AddGameDataObject<Chocolate_Mold_Frozen>();
+			AddGameDataObject<Chocolate_Mold_Provider>();
+			
+			AddGameDataObject<Red_White>();
+			AddGameDataObject<Red_Blue>();
+			AddGameDataObject<Blue_White>();
+			AddGameDataObject<Green_Blue>();
+			AddGameDataObject<Green_White>();
+			AddGameDataObject<Green_Red>();
+			AddGameDataObject<Purple_White>();
+			AddGameDataObject<Purple_Green>();
+			AddGameDataObject<Purple_Yellow>();
+		}
 
-			AddGameDataObject<Easter_Egg_1>();
-			AddGameDataObject<Easter_Egg_2>();
-			AddGameDataObject<Easter_Egg_3>();
-
-			AddGameDataObject<Jumbo_Easter_Egg_1>();
-			AddGameDataObject<Jumbo_Easter_Egg_2>();
-			AddGameDataObject<Jumbo_Easter_Egg_3>();
+		public override void OnInitialise()
+		{
+			GameData.Main.Get<Appliance>(ApplianceReferences.Freezer).Processes.Add(
+			new Appliance.ApplianceProcesses()
+			{
+				Process = RefVars.Freeze,
+				Speed = 1,
+				IsAutomatic = true
+			});
 		}
 	}
 }
