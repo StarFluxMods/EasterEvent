@@ -1,17 +1,21 @@
-﻿using EasterEvent.Customs;
+﻿using ApplianceLib.Api;
+using EasterEvent.Customs;
 using EasterEvent.Customs.Appliances;
+using EasterEvent.Customs.Appliances.Providers;
 using EasterEvent.Customs.Processes;
 using KitchenData;
 using KitchenLib;
 using KitchenLib.References;
+using KitchenLib.Utils;
 using KitchenMods;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace EasterEvent
 {
-	public class Main : BaseMod
+    public class Main : BaseMod
 	{
 		public const string MOD_ID = "easterevent";
 		public const string MOD_NAME = "Easter Event";
@@ -65,6 +69,17 @@ namespace EasterEvent
 			AddGameDataObject<Purple_White>();
 			AddGameDataObject<Purple_Green>();
 			AddGameDataObject<Purple_Yellow>();
+			AddGameDataObject<Egg_Basket_Dirty>();
+
+			RestrictedItemTransfers.AllowItem("Egg_Basket", GDOUtils.GetCustomGameDataObject<Red_White>().ID);
+			RestrictedItemTransfers.AllowItem("Egg_Basket", GDOUtils.GetCustomGameDataObject<Red_Blue>().ID);
+			RestrictedItemTransfers.AllowItem("Egg_Basket", GDOUtils.GetCustomGameDataObject<Blue_White>().ID);
+			RestrictedItemTransfers.AllowItem("Egg_Basket", GDOUtils.GetCustomGameDataObject<Green_Blue>().ID);
+			RestrictedItemTransfers.AllowItem("Egg_Basket", GDOUtils.GetCustomGameDataObject<Green_White>().ID);
+			RestrictedItemTransfers.AllowItem("Egg_Basket", GDOUtils.GetCustomGameDataObject<Green_Red>().ID);
+			RestrictedItemTransfers.AllowItem("Egg_Basket", GDOUtils.GetCustomGameDataObject<Purple_White>().ID);
+			RestrictedItemTransfers.AllowItem("Egg_Basket", GDOUtils.GetCustomGameDataObject<Purple_Green>().ID);
+			RestrictedItemTransfers.AllowItem("Egg_Basket", GDOUtils.GetCustomGameDataObject<Purple_Yellow>().ID);
 		}
 
 		public override void OnInitialise()
@@ -76,6 +91,23 @@ namespace EasterEvent
 				Speed = 1,
 				IsAutomatic = true
 			});
+		}
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void LogInfo(string message)
+		{
+			Debug.Log($"[{MOD_NAME}] " + message);
+		}
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void LogWarning(string message)
+		{
+			Debug.LogWarning($"[{MOD_NAME}] " + message);
+		}
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void LogError(string message)
+		{
+			Debug.LogError($"[{MOD_NAME}] " + message);
 		}
 	}
 }

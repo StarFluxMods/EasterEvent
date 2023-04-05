@@ -1,4 +1,5 @@
 ﻿using EasterEvent.Customs.Appliances;
+using EasterEvent.Customs.Appliances.Providers;
 using EasterEvent.Customs.Processes;
 using KitchenData;
 using KitchenLib.Customs;
@@ -7,7 +8,7 @@ using KitchenLib.Utils;
 
 namespace EasterEvent.Customs
 {
-	public static class RefVars
+    public static class RefVars
 	{
 		#region Vanilla
 		public static Process Chop  => Find<Process>(ProcessReferences.Chop);
@@ -19,6 +20,7 @@ namespace EasterEvent.Customs
 		//Items
 		public static Item Chocolate_Egg => Find<Item>(GDOUtils.GetCustomGameDataObject<Chocolate_Egg>().ID);
 		public static Item Chocolate_Egg_Half => Find<Item>(GDOUtils.GetCustomGameDataObject<Chocolate_Egg_Half>().ID);
+		public static Item Egg_Basket_Dirty => Find<Item>(GDOUtils.GetCustomGameDataObject<Egg_Basket_Dirty>().ID);
 		public static Item Egg_Basket => Find<Item>(GDOUtils.GetCustomGameDataObject<Egg_Basket>().ID);
 		public static Item Chocolate_Mold_Empty => Find<Item>(GDOUtils.GetCustomGameDataObject<Chocolate_Mold_Empty>().ID);
 		public static Item Chocolate_Mold_Raw => Find<Item>(GDOUtils.GetCustomGameDataObject<Chocolate_Mold_Raw>().ID);
@@ -30,6 +32,20 @@ namespace EasterEvent.Customs
 		public static Item Red_Dye => Find<Item>(GDOUtils.GetCustomGameDataObject<Red_Dye>().ID);
 		public static Item White_Dye => Find<Item>(GDOUtils.GetCustomGameDataObject<White_Dye>().ID);
 		public static Item Yellow_Dye => Find<Item>(GDOUtils.GetCustomGameDataObject<Yellow_Dye>().ID);
+
+		//Eggs
+
+		public static Item Blue_White => Find<Item>(GDOUtils.GetCustomGameDataObject<Blue_White>().ID);
+		public static Item Red_Blue => Find<Item>(GDOUtils.GetCustomGameDataObject<Red_Blue>().ID);
+		public static Item Red_White => Find<Item>(GDOUtils.GetCustomGameDataObject<Red_White>().ID);
+
+		public static Item Green_Blue => Find<Item>(GDOUtils.GetCustomGameDataObject<Green_Blue>().ID);
+		public static Item Green_Red => Find<Item>(GDOUtils.GetCustomGameDataObject<Green_Red>().ID);
+		public static Item Green_White => Find<Item>(GDOUtils.GetCustomGameDataObject<Green_White>().ID);
+
+		public static Item Purple_Green => Find<Item>(GDOUtils.GetCustomGameDataObject<Purple_Green>().ID);
+		public static Item Purple_White => Find<Item>(GDOUtils.GetCustomGameDataObject<Purple_White>().ID);
+		public static Item Purple_Yellow => Find<Item>(GDOUtils.GetCustomGameDataObject<Purple_Yellow>().ID);
 
 		//Processes
 		public static Process Chonkify => Find<Process>(GDOUtils.GetCustomGameDataObject<Chonkify>().ID);
