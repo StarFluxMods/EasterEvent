@@ -3,7 +3,7 @@
   <PropertyGroup>
 	  <TargetFramework>net472</TargetFramework>
 	  <LangVersion>latest</LangVersion>
-	  <AssetBundlePath>C:\Users\Pilch\Desktop\PlateUp! Workspace\PlateUp! Asset Creation Zone\Assets\StreamingAssets\easterevent.assets</AssetBundlePath>
+	  <AssetBundlePath>C:\Users\Pilch\Onedrive\Desktop\PlateUp! Workspace\PlateUp! Asset Creation Zone\Assets\StreamingAssets\easterevent.assets</AssetBundlePath>
   </PropertyGroup>
 
 	<ItemGroup>

@@ -70,6 +70,7 @@ namespace EasterEvent
 			AddGameDataObject<Purple_Green>();
 			AddGameDataObject<Purple_Yellow>();
 			AddGameDataObject<Egg_Basket_Dirty>();
+			AddGameDataObject<EasterLayout>();
 
 			RestrictedItemTransfers.AllowItem("Egg_Basket", GDOUtils.GetCustomGameDataObject<Red_White>().ID);
 			RestrictedItemTransfers.AllowItem("Egg_Basket", GDOUtils.GetCustomGameDataObject<Red_Blue>().ID);

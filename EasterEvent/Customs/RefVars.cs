@@ -18,6 +18,7 @@ namespace EasterEvent.Customs
 
 		#region EasterEvent
 		//Items
+		public static LayoutProfile EasterLayout => Find<LayoutProfile>(GDOUtils.GetCustomGameDataObject<EasterLayout>().ID);
 		public static Item Chocolate_Egg => Find<Item>(GDOUtils.GetCustomGameDataObject<Chocolate_Egg>().ID);
 		public static Item Chocolate_Egg_Half => Find<Item>(GDOUtils.GetCustomGameDataObject<Chocolate_Egg_Half>().ID);
 		public static Item Egg_Basket_Dirty => Find<Item>(GDOUtils.GetCustomGameDataObject<Egg_Basket_Dirty>().ID);
