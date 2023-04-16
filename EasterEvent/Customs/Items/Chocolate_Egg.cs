@@ -9,6 +9,7 @@ namespace EasterEvent.Customs
 	{
 		public override string UniqueNameID => "Chocolate_Egg";
 		public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("Chocolate_Egg");
+		public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
 
 		public override bool AutoCollapsing => true;
 		public override List<ItemGroup.ItemSet> Sets => new List<ItemGroup.ItemSet>

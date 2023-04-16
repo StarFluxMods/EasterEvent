@@ -18,6 +18,9 @@ namespace EasterEvent.Customs.Appliances
 		public override int BaseGameDataObjectID => ApplianceReferences.Countertop;
 		public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("Source_Chocolate_Mold");
 		public override PriceTier PriceTier => PriceTier.Medium;
+		public override bool SellOnlyAsDuplicate => true;
+		public override bool IsPurchasable => true;
+		public override ShoppingTags ShoppingTags => ShoppingTags.Cooking | ShoppingTags.Misc;
 
 		public override List<(Locale, ApplianceInfo)> InfoList => new List<(Locale, ApplianceInfo)>
 		{
@@ -37,7 +40,8 @@ namespace EasterEvent.Customs.Appliances
 			{
 				Available = 1,
 				Maximum = 1,
-				Item = RefVars.Chocolate_Mold_Empty.ID
+				Item = RefVars.Chocolate_Mold_Empty.ID,
+				AutoPlaceOnHolder = true
 			}
 		};
 

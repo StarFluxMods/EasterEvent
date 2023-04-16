@@ -30,10 +30,6 @@ namespace EasterEvent.Customs
 			new CEggBasketRestrictions
 			{
 				Key = "Egg_Basket"
-			},
-			new CSlowPlayer
-			{
-				Factor = 1f
 			}
 		};
 

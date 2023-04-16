@@ -14,8 +14,44 @@ namespace EasterEvent.Customs
 		public abstract string _Color1 { get; }
 		public abstract string _Color2 { get; }
 		public override string UniqueNameID => $"{_Color1}_{_Color2}";
-		
+		public override Item DirtiesTo => RefVars.Egg_Shell;
+
 		public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>($"{_Color1}_{_Color2}");
+		public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
+
+		public override List<ItemGroupView.ColourBlindLabel> Labels => new List<ItemGroupView.ColourBlindLabel>
+		{
+			new ItemGroupView.ColourBlindLabel
+			{
+				Item = RefVars.Blue_Dye,
+				Text = "B"
+			},
+			new ItemGroupView.ColourBlindLabel
+			{
+				Item = RefVars.Green_Dye,
+				Text = "G"
+			},
+			new ItemGroupView.ColourBlindLabel
+			{
+				Item = RefVars.Purple_Dye,
+				Text = "P"
+			},
+			new ItemGroupView.ColourBlindLabel
+			{
+				Item = RefVars.Red_Dye,
+				Text = "R"
+			},
+			new ItemGroupView.ColourBlindLabel
+			{
+				Item = RefVars.White_Dye,
+				Text = "W"
+			},
+			new ItemGroupView.ColourBlindLabel
+			{
+				Item = RefVars.Yellow_Dye,
+				Text = "Y"
+			}
+		};
 
 		public override List<ItemGroup.ItemSet> Sets => new List<ItemGroup.ItemSet>
 		{

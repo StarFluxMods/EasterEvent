@@ -1,5 +1,6 @@
 ﻿
 using KitchenData;
+using System.Collections.Generic;
 
 namespace EasterEvent.Customs
 {
@@ -12,5 +13,17 @@ namespace EasterEvent.Customs
 		public override string _Color1 => "White";
 
 		public override string _Color2 => "Green";
+
+		public override List<Item.ItemProcess> Processes => new List<Item.ItemProcess>
+		{
+			new Item.ItemProcess
+			{
+				Duration = 1,
+				IsBad = false,
+				Process = RefVars.Chonkify,
+				RequiresWrapper = false,
+				Result = RefVars.Jumbo_Green_White,
+			}
+		};
 	}
 }

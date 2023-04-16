@@ -13,6 +13,7 @@ using Unity.Entities;
 
 namespace EasterEvent.Systems
 {
+	[UpdateInGroup(typeof(ItemTransferEarlyPrune))]
 	public class EnsureTransfers : GameSystemBase, IModSystem
 	{
 		private EntityQuery cItemTransferProposal;
@@ -33,6 +34,7 @@ namespace EasterEvent.Systems
 
 				if (citemTransferProposal.Status != ItemTransferStatus.Pruned)
 				{
+					
 					if (Require(citemTransferProposal.Destination, out CToolUser user))
 					{
 						if (Require(user.CurrentTool, out CEggBasketRestrictions restrictions))
@@ -41,6 +43,10 @@ namespace EasterEvent.Systems
 							{
 								citemTransferProposal.Status = ItemTransferStatus.Pruned;
 							}
+						}
+						else if (Main.JumboTypes.Contains(citemTransferProposal.ItemType))
+						{
+							citemTransferProposal.Status = ItemTransferStatus.Pruned;
 						}
 					}
 					else if (Require(citemTransferProposal.Destination, out CItemHolder holer))

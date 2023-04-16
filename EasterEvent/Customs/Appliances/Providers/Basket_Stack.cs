@@ -11,11 +11,13 @@ namespace EasterEvent.Customs.Appliances.Providers
     public class Basket_Stack : CustomAppliance
     {
         public override string UniqueNameID => "Basket_Stack";
-        public override int BaseGameDataObjectID => ApplianceReferences.PotStack;
+        //public override int BaseGameDataObjectID => ApplianceReferences.PotStack;
         public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("Basket_Stack");
         public override PriceTier PriceTier => PriceTier.Medium;
+		public override bool IsPurchasable => true;
+		public override ShoppingTags ShoppingTags => ShoppingTags.Cooking | ShoppingTags.Misc;
 
-        public override List<(Locale, ApplianceInfo)> InfoList => new List<(Locale, ApplianceInfo)>
+		public override List<(Locale, ApplianceInfo)> InfoList => new List<(Locale, ApplianceInfo)>
         {
             (
                 Locale.English,

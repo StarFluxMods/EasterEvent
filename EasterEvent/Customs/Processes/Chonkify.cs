@@ -10,5 +10,6 @@ namespace EasterEvent.Customs.Processes
 		public override GameDataObject BasicEnablingAppliance => RefVars.Egg_Chonkifier;
 		public override int EnablingApplianceCount => 1;
 		public override bool CanObfuscateProgress => true;
+		public override string Icon => "<sprite name=\"Zap\">";
 	}
 }

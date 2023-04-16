@@ -10,5 +10,6 @@ namespace EasterEvent.Customs
 		public override string UniqueNameID => "Purple_Dye";
 		public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("Purple");
 		public override Appliance DedicatedProvider => RefVars.Purple_Dye_Provider;
+		public override string ColourBlindTag => "P";
 	}
 }

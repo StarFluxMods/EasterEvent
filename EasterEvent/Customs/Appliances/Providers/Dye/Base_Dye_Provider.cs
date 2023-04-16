@@ -20,7 +20,9 @@ namespace EasterEvent.Customs
 		public override int BaseGameDataObjectID => ApplianceReferences.SourceApple;
 		public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>($"{DyeName}_Dye_Station");
 		public override PriceTier PriceTier => PriceTier.DecoCheap;
-
+		public override bool SellOnlyAsDuplicate => true;
+		public override bool IsPurchasable => true;
+		public override ShoppingTags ShoppingTags => ShoppingTags.Cooking | ShoppingTags.Misc;
 		public override List<(Locale, ApplianceInfo)> InfoList => new List<(Locale, ApplianceInfo)>
 		{
 			(
@@ -49,22 +51,16 @@ namespace EasterEvent.Customs
 			{
 				case "Blue":
 					return MaterialUtils.GetExistingMaterial("Balloon - Blue");
-					break;
 				case "Green":
 					return MaterialUtils.GetExistingMaterial("Balloon - Green");
-					break;
 				case "Purple":
 					return MaterialUtils.GetExistingMaterial("Clothing Purple");
-					break;
 				case "Red":
 					return MaterialUtils.GetExistingMaterial("Balloon - Red");
-					break;
 				case "White":
 					return MaterialUtils.GetExistingMaterial("Egg - White");
-					break;
 				case "Yellow":
 					return MaterialUtils.GetExistingMaterial("Bamboo Fried");
-					break;
 				default:
 					return null;
 			}

@@ -11,5 +11,6 @@ namespace EasterEvent.Customs.Processes
 		public override GameDataObject BasicEnablingAppliance => (Appliance)GDOUtils.GetExistingGDO(ApplianceReferences.Freezer);
 		public override int EnablingApplianceCount => 1;
 		public override bool CanObfuscateProgress => true;
+		public override string Icon => "<sprite name=\"Freeze\">";
 	}
 }
