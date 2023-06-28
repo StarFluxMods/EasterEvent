@@ -88,9 +88,9 @@ namespace EasterEvent.Customs
 				Ingredient = RefVars.Butter
 			},
 		};
-		public override Dictionary<Locale, string> Recipe => new Dictionary<Locale, string>
+		public override Dictionary<KitchenData.Locale, string> Recipe => new Dictionary<KitchenData.Locale, string>
 		{
-			{ Locale.English, "Cut, Warm, and Butter!" }
+			{ KitchenData.Locale.English, "Cut, Warm, and Butter!" }
 		};
 
 		public override void OnRegister(GameDataObject gameDataObject)
@@ -98,8 +98,8 @@ namespace EasterEvent.Customs
 			Dish dish = (Dish)gameDataObject;
 			LocalisationObject<UnlockInfo> info = new LocalisationObject<UnlockInfo>();
 			FieldInfo dictionary = ReflectionUtils.GetField<LocalisationObject<UnlockInfo>>("Dictionary");
-			Dictionary<Locale, UnlockInfo> dict = new Dictionary<Locale, UnlockInfo>();
-			dict.Add(Locale.English, new UnlockInfo
+			Dictionary<KitchenData.Locale, UnlockInfo> dict = new Dictionary<KitchenData.Locale, UnlockInfo>();
+			dict.Add(KitchenData.Locale.English, new UnlockInfo
 			{
 				Name = "Hot Cross Buns",
 				Description = "Adds Hot Cross Buns as a Starter",

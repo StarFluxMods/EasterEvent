@@ -172,7 +172,7 @@ namespace EasterEvent
 
 			GameData.Main.Get<PlayerCosmetic>(PlayerCosmeticReferences.BunnyEarHat).CustomerSettings.Add((RestaurantSetting)GDOUtils.GetCustomGameDataObject<Easter_Setting>().GameDataObject);
 			GameData.Main.Get<PlayerCosmetic>(PlayerCosmeticReferences.BunnyHat).CustomerSettings.Add((RestaurantSetting)GDOUtils.GetCustomGameDataObject<Easter_Setting>().GameDataObject);
-
+			
 		}
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		internal static void LogInfo(string message)

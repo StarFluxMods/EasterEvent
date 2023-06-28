@@ -97,9 +97,9 @@ namespace EasterEvent.Customs
 				DynamicMenuIngredient = null
 			}
 		};
-		public override Dictionary<Locale, string> Recipe => new Dictionary<Locale, string>
+		public override Dictionary<KitchenData.Locale, string> Recipe => new Dictionary<KitchenData.Locale, string>
 		{
-			{ Locale.English, "Paint your eggs, and give them a ZAP for growth!" }
+			{ KitchenData.Locale.English, "Paint your eggs, and give them a ZAP for growth!" }
 		};
 
 		public override void OnRegister(GameDataObject gameDataObject)
@@ -107,8 +107,8 @@ namespace EasterEvent.Customs
 			Dish dish = (Dish)gameDataObject;
 			LocalisationObject<UnlockInfo> info = new LocalisationObject<UnlockInfo>();
 			FieldInfo dictionary = ReflectionUtils.GetField<LocalisationObject<UnlockInfo>>("Dictionary");
-			Dictionary<Locale, UnlockInfo> dict = new Dictionary<Locale, UnlockInfo>();
-			dict.Add(Locale.English, new UnlockInfo
+			Dictionary<KitchenData.Locale, UnlockInfo> dict = new Dictionary<KitchenData.Locale, UnlockInfo>();
+			dict.Add(KitchenData.Locale.English, new UnlockInfo
 			{
 				Name = "Jumbo Eggs",
 				Description = "Adds Jumbo Eggs as a new variant for Eggs",

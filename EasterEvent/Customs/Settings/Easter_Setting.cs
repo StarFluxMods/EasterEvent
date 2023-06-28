@@ -48,10 +48,10 @@ namespace EasterEvent.Customs.Settings
         public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("Easter");
 		public override Unlock StartingUnlock => (UnlockCard)GDOUtils.GetCustomGameDataObject<EasterCard>().GameDataObject;
 
-        public override List<(Locale, BasicInfo)> InfoList => new List<(Locale, BasicInfo)>
+        public override List<(KitchenData.Locale, BasicInfo)> InfoList => new List<(KitchenData.Locale, BasicInfo)>
         {
             (
-                Locale.English,
+                KitchenData.Locale.English,
                 new BasicInfo
                 {
                     Name = "Easter",

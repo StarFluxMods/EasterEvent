@@ -29,9 +29,9 @@ namespace EasterEvent.Customs.Cards
 			}
 		};
 
-		public override List<(Locale, UnlockInfo)> InfoList => new List<(Locale, UnlockInfo)>
+		public override List<(KitchenData.Locale, UnlockInfo)> InfoList => new List<(KitchenData.Locale, UnlockInfo)>
 		{
-			(Locale.English, new UnlockInfo
+			(KitchenData.Locale.English, new UnlockInfo
 			{
 				Name = "Eggstra Special",
 				Description = "Customers can order up to 3 times, Children make more mess, Customers can change their orders.",

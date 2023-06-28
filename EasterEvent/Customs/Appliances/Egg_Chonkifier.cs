@@ -24,10 +24,10 @@ namespace EasterEvent.Customs
 			new CItemHolder()
 		};
 
-		public override List<(Locale, ApplianceInfo)> InfoList => new List<(Locale, ApplianceInfo)>
+		public override List<(KitchenData.Locale, ApplianceInfo)> InfoList => new List<(KitchenData.Locale, ApplianceInfo)>
 		{
 			(
-				Locale.English,
+				KitchenData.Locale.English,
 				new ApplianceInfo
 				{
 					Name = "Egg Chonkifier",

@@ -158,9 +158,9 @@ namespace EasterEvent.Customs
 				Ingredient = RefVars.Egg_Basket
 			}
 		};
-		public override Dictionary<Locale, string> Recipe => new Dictionary<Locale, string>
+		public override Dictionary<KitchenData.Locale, string> Recipe => new Dictionary<KitchenData.Locale, string>
 		{
-			{ Locale.English, "Melt Chocolate, Mold and Freeze. Add paint ready to serve!" }
+			{ KitchenData.Locale.English, "Melt Chocolate, Mold and Freeze. Add paint ready to serve!" }
 		};
 
 		public override void OnRegister(GameDataObject gameDataObject)
@@ -168,8 +168,8 @@ namespace EasterEvent.Customs
 			Dish dish = (Dish)gameDataObject;
 			LocalisationObject<UnlockInfo> info = new LocalisationObject<UnlockInfo>();
 			FieldInfo dictionary = ReflectionUtils.GetField<LocalisationObject<UnlockInfo>>("Dictionary");
-			Dictionary<Locale, UnlockInfo> dict = new Dictionary<Locale, UnlockInfo>();
-			dict.Add(Locale.English, new UnlockInfo
+			Dictionary<KitchenData.Locale, UnlockInfo> dict = new Dictionary<KitchenData.Locale, UnlockInfo>();
+			dict.Add(KitchenData.Locale.English, new UnlockInfo
 			{
 				Name = "Purple Dye",
 				Description = "Adds Purple Dye as a new color for Eggs",
